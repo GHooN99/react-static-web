@@ -14,7 +14,7 @@ function App() {
     <h1>
       파이썬 서버로 부터 가져온 데이터 ::
       <br />
-      {data ? data.msg : "데이터 못가져왓어서 없습니다."}
+      {data ? JSON.stringify(data) : "데이터 못가져왓어서 없습니다."}
     </h1>
   );
 }
