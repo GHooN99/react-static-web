@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   const [data, setData] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:3000/api")
+    fetch("https://flask-server-example.onrender.com/api")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err));
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <h1>
-      가져온 데이터
+      파이썬 서버로 부터 가져온 데이터 ::
       <br />
       {data ? data.msg : "데이터가 없습니다."}
     </h1>
